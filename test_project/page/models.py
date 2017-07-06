@@ -7,7 +7,7 @@ class Category(models.Model):
 		return self.name
 	
 	class Meta:
-		verbose_name = "категория"
+		verbose_name 		= "категория"
 		verbose_name_plural = "категории"
 
 class Good(models.Model):
@@ -38,6 +38,7 @@ class Good(models.Model):
 		super(Good, self,).delete(*args, **kwargs)
 
 		# Выполняем кикие-либо действия после удаления записи
+		
 	class Meta:
 		ordering 			= ["-price", "name"]
 		unique_together 	= "category", "name", "price"
